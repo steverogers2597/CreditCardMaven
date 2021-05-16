@@ -10,7 +10,7 @@ public interface IStatementService {
 	 StatementDTO removeStatement(long id);
 	 StatementDTO updateStatement(long id,StatementDTO statementdto);
 	 StatementDTO getStatement(long id);
-	List<StatementDTO> getAllStatements();
+	 List<StatementDTO> getAllStatements();
 	
 	
 }
