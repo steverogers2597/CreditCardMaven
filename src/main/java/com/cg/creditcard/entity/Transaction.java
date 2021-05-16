@@ -23,6 +23,7 @@ public class Transaction {
 	private String paymentMethod;
 	private String description;
 	
+	
 	public Transaction(long tranId, String cardNumber, LocalDate tranDate, String status, double amount,
 			String paymentMethod, String description) {
 		super();
