@@ -62,6 +62,11 @@ public class CustomerDTO {
 		this.dob = dob;
 		this.address = address;
 	}
+	
+	public CustomerDTO() {
+		super();
+		
+	}
 	@Override
 	public String toString() {
 		return "CustomerDTO [userId=" + userId + ", name=" + name + ", email=" + email + ", contactNo=" + contactNo

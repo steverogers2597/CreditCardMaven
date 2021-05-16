@@ -30,6 +30,12 @@ public class Customer {
 		this.address = address;
 	}
 	
+	
+	public Customer() {
+		super();
+	}
+
+
 	public String getUserId() {
 		return userId;
 	}
