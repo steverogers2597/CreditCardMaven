@@ -3,11 +3,12 @@ package com.cg.creditcard.service;
 import java.util.List;
 
 import com.cg.creditcard.entity.Customer;
+import com.cg.creditcard.model.CustomerDTO;
 
 public interface ICustomerService{
-	Customer addCustomer(Customer customer);
-	Customer removeCustomer(long custId);
-	Customer updateCustomer(long custId,Customer customer);
-	Customer getCustomer(long custId);
-	List<Customer> getAllCustomers();
+	CustomerDTO addCustomer(CustomerDTO customerdto);
+	CustomerDTO removeCustomer(long custId);
+	CustomerDTO updateCustomer(long custId,CustomerDTO customerdto);
+	CustomerDTO getCustomer(long custId);
+	List<CustomerDTO> getAllCustomers();
 }

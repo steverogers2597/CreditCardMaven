@@ -3,14 +3,14 @@ package com.cg.creditcard.service;
 import java.util.List;
 
 import com.cg.creditcard.entity.Statement;
+import com.cg.creditcard.model.StatementDTO;
 
 public interface IStatementService {
-	 Statement addStatement(Statement statement);
-	 Statement removeStatement(long id);
-	 Statement updateStatement(long id,Statement statement);
-	 Statement getStatement(long id);
-	List<Statement> getAllStatements();
-	List<Statement> getBilledStatements();
-	List<Statement> getUnbilledStatements();
+	 StatementDTO addStatement(StatementDTO statementdto);
+	 StatementDTO removeStatement(long id);
+	 StatementDTO updateStatement(long id,StatementDTO statementdto);
+	 StatementDTO getStatement(long id);
+	List<StatementDTO> getAllStatements();
+	
 	
 }

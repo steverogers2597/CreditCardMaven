@@ -50,7 +50,7 @@ public class AccountController {
 		return new ResponseEntity("Account removed Successfully!",HttpStatus.OK);
 	}
 	
-	@PutMapping("/updateAccount{id}")
+	@PutMapping("/updateAccount/{id}")
 	public ResponseEntity updateAccount(@RequestBody @PathVariable("id")long id,AccountDTO accountdto) {
 		accountService.updateAccount(id, accountdto);
 		return new ResponseEntity("Account updated successfully!",HttpStatus.OK);
