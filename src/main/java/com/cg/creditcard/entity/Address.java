@@ -1,6 +1,9 @@
 package com.cg.creditcard.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -9,31 +12,46 @@ import javax.persistence.Table;
 @Table(name="Address")
 public class Address {
 	
-	public Address() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
+	
+	private Integer id;
+	
 	private String doorNo;
 	private String street;
 	private String area;
 	private String city;
 	private String state;
 	private int pincode;
-	@OneToOne
-	@JoinColumn(name="user_id")
-	private Customer customer;
 	
-	public Address(String doorNo, String street, String area, String city, String state, int pincode,Customer customer) {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer addressId;
+	
+	public Address() {
 		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Address(int addressId, String doorNo, String street, String area, String city, String state, int pincode) {
+		super();
+		this.addressId = addressId;
 		this.doorNo = doorNo;
 		this.street = street;
 		this.area = area;
 		this.city = city;
 		this.state = state;
 		this.pincode = pincode;
-		this.customer=customer;
 	}
+	
+
+	public int getAddressId() {
+		return addressId;
+	}
+
+
+	public void setAddressId(int addressId) {
+		this.addressId = addressId;
+	}
+
 
 	public String getDoorNo() {
 		return doorNo;
@@ -83,18 +101,11 @@ public class Address {
 		this.pincode = pincode;
 	}
 	
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
+	
 	@Override
 	public String toString() {
 		return "Address [doorNo=" + doorNo + ", street=" + street + ", area=" + area + ", city=" + city + ", state="
-				+ state + ", pincode=" + pincode + ", customer=" + customer + "]";
+				+ state + ", pincode=" + pincode + ", addressId=" + addressId + "]";
 	}
 	
 	

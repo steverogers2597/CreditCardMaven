@@ -16,16 +16,14 @@ public class Payment {
 	long paymentId;
 	String method;
 	double amountDue;
-	@ManyToOne
-	@JoinColumn(name="card_id")
-	private CreditCard creditCard;
 	
-	public Payment(long paymentId, String method, double amountDue,CreditCard creditCard) {
+	
+	public Payment(long paymentId, String method, double amountDue) {
 		super();
 		this.paymentId = paymentId;
 		this.method = method;
 		this.amountDue = amountDue;
-		this.creditCard=creditCard;
+		
 	}
 
 	public long getPaymentId() {
@@ -52,18 +50,11 @@ public class Payment {
 		this.amountDue = amountDue;
 	}
 
-	public CreditCard getCreditCard() {
-		return creditCard;
-	}
-
-	public void setCreditCard(CreditCard creditCard) {
-		this.creditCard = creditCard;
-	}
+	
 
 	@Override
 	public String toString() {
-		return "Payment [paymentId=" + paymentId + ", method=" + method + ", amountDue=" + amountDue + ", creditCard="
-				+ creditCard + "]";
+		return "Payment [paymentId=" + paymentId + ", method=" + method + ", amountDue=" + amountDue + "]";
 	}
 
 	public Payment() {

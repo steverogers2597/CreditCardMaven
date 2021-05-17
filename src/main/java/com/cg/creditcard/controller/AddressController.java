@@ -1,9 +1,12 @@
 package com.cg.creditcard.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -12,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.creditcard.model.AccountDTO;
 import com.cg.creditcard.model.AddressDTO;
+import com.cg.creditcard.model.CustomerDTO;
 import com.cg.creditcard.service.IAddressService;
 
 @RestController
@@ -24,14 +28,25 @@ public class AddressController {
 		addressService.addAddress(addressdto);
 		return new ResponseEntity("Address added successfully!",HttpStatus.OK);
 	}
-	@PutMapping("/updateAddress")
-	public ResponseEntity updateAddress(@RequestBody AddressDTO addressdto) {
-		addressService.updateAddress(addressdto);
-		return new ResponseEntity("Account updated successfully!",HttpStatus.OK);
+	@PutMapping("/updateAddress/{id}")
+	public ResponseEntity updateAddress(@RequestBody @PathVariable("id")Integer addrId, AddressDTO addressdto) {
+		addressService.updateAddress(addrId,addressdto);
+		return new ResponseEntity("Address updated successfully!",HttpStatus.OK);
 	}
-	@DeleteMapping("/removeAddress")
-	public ResponseEntity removeAccount(@RequestBody AddressDTO addressdto) {
-		addressService.deleteAddress(addressdto);
-		return new ResponseEntity("Account removed Successfully!",HttpStatus.OK);
+	@DeleteMapping("/removeAddress/{id}")
+	public ResponseEntity removeAddress(@RequestBody @PathVariable("id") Integer addrId) {
+		addressService.removeAddress(addrId);
+		return new ResponseEntity("Address removed Successfully!",HttpStatus.OK);
+	}
+	@GetMapping("/getAddressById/{id}")
+	public ResponseEntity getCustomerById(@PathVariable("id")Integer addrId) {
+		AddressDTO address = addressService.getAddress(addrId);
+		return new ResponseEntity(address,HttpStatus.OK);
+	}
+	@GetMapping("/getAllAddresses")
+	public ResponseEntity getAllCustomers(){
+		List<AddressDTO> addresses = addressService.getAllAddresses();
+		ResponseEntity response = new ResponseEntity(addresses,HttpStatus.OK);
+		return response;
 	}
 }

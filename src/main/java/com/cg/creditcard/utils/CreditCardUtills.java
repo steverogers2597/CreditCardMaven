@@ -11,12 +11,12 @@ public class CreditCardUtills {
 	public static List<CreditCardDTO> convertToCreditCardDtoList(List<CreditCard> list){
 		List<CreditCardDTO> dtoList=new ArrayList<CreditCardDTO>();
 		for(CreditCard creditCard : list) {
-			dtoList.add(convertToCustomerDto(creditCard));
+			dtoList.add(convertToCreditCardDto(creditCard));
 		}
 		return dtoList;
 	}
 
-	private static CreditCardDTO convertToCustomerDto(CreditCard creditCard) {
+	public static CreditCardDTO convertToCreditCardDto(CreditCard creditCard) {
 		CreditCardDTO creditCardDTO =new CreditCardDTO();
 		creditCardDTO.setId(creditCard.getId());
 		creditCardDTO.setCardName(creditCard.getCardName());
@@ -28,7 +28,7 @@ public class CreditCardUtills {
 		return creditCardDTO;
 	}
 	
-	private static CreditCard convertToCustomer(CreditCardDTO creditCardDTO) {
+	public static CreditCard convertToCreditCard(CreditCardDTO creditCardDTO) {
 		CreditCard creditCard = new CreditCard();
 		creditCard.setId(creditCardDTO.getId());
 		creditCard.setCardName(creditCardDTO.getCardName());

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CreditCardDTO {
 	
-	private long id;
+	private Long id;
 	private String cardName;
 	private String cardType;
 	private String cardNumber;

@@ -18,7 +18,7 @@ public class AddressUtils {
 		return dtoList;
 	}	
 
-	private static AddressDTO convertToAddressDto(Address address) {
+	public static AddressDTO convertToAddressDto(Address address) {
 		AddressDTO addressDto =new AddressDTO();
 		addressDto.setDoorNo(address.getDoorNo());
 		addressDto.setStreet(address.getStreet());
@@ -28,13 +28,13 @@ public class AddressUtils {
 		return addressDto;
 	}
 	
-	private static Address convertToAddress(AddressDTO addressDto) {
+	public static Address convertToAddress(AddressDTO addressDto) {
 		Address address = new Address();
-		addressDto.setDoorNo(address.getDoorNo());
-		addressDto.setStreet(address.getStreet());
-		addressDto.setArea(address.getArea());
-		addressDto.setCity(address.getCity());
-		addressDto.setState(address.getState());
+		address.setDoorNo(addressDto.getDoorNo());
+		address.setStreet(addressDto.getStreet());
+		address.setArea(addressDto.getArea());
+		address.setCity(addressDto.getCity());
+		address.setState(addressDto.getState());
 		return address;
 	}
 }

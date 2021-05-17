@@ -33,7 +33,7 @@ public class CustomerController {
 		customerService.removeCustomer(id);
 		return new ResponseEntity("Customer removed Successfully!",HttpStatus.OK);
 	}
-	@PutMapping("/updateCustomer{id}")
+	@PutMapping("/updateCustomer/{id}")
 	public ResponseEntity updateCustomer(@RequestBody @PathVariable("id")long id,CustomerDTO customerdto) {
 		customerService.updateCustomer(id, customerdto);
 		return new ResponseEntity("Customer info updated successfully!",HttpStatus.OK);
