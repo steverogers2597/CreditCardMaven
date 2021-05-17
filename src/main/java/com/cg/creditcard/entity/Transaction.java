@@ -98,5 +98,10 @@ public class Transaction {
 				+ status + ", amount=" + amount + ", paymentMethod=" + paymentMethod + ", description=" + description
 				+ "]";
 	}
+
+	public Transaction() {
+		super();
+		
+	}
 	
 }

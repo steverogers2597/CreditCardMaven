@@ -65,5 +65,11 @@ public class Payment {
 		return "Payment [paymentId=" + paymentId + ", method=" + method + ", amountDue=" + amountDue + ", creditCard="
 				+ creditCard + "]";
 	}
+
+	public Payment() {
+		super();
+		
+	}
+	
 	
 }

@@ -41,5 +41,9 @@ public class PaymentDTO {
 	public String toString() {
 		return "PaymentDTO [paymentId=" + paymentId + ", method=" + method + ", amountDue=" + amountDue + "]";
 	}
+	public PaymentDTO() {
+		super();
+		
+	}
 	
 }

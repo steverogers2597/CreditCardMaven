@@ -74,5 +74,10 @@ public class Statement {
 		return "Statement [statementId=" + statementId + ", dueAmount=" + dueAmount + ", billingDate=" + billingDate
 				+ ", dueDate=" + dueDate + ", customer=" + customer + "]";
 	}
+
+	public Statement() {
+		super();
+		
+	}
 	
 }

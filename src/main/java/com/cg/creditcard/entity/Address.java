@@ -9,6 +9,11 @@ import javax.persistence.Table;
 @Table(name="Address")
 public class Address {
 	
+	public Address() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	private String doorNo;
 	private String street;
 	private String area;

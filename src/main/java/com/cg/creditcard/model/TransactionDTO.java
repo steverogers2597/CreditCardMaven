@@ -75,6 +75,10 @@ public class TransactionDTO {
 				+ ", status=" + status + ", amount=" + amount + ", paymentMethod=" + paymentMethod + ", description="
 				+ description + "]";
 	}
+	public TransactionDTO() {
+		super();
+		
+	}
 	
 	
 	

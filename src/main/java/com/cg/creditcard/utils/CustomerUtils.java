@@ -16,7 +16,7 @@ public class CustomerUtils {
 		return dtoList;
 	}
 
-	private static CustomerDTO convertToCustomerDto(Customer customer) {
+	public static CustomerDTO convertToCustomerDto(Customer customer) {
 		CustomerDTO customerDto =new CustomerDTO();
 		customerDto.setUserId(customer.getUserId());
 		customerDto.setName(customer.getName());
@@ -26,7 +26,7 @@ public class CustomerUtils {
 		return customerDto;
 	}
 	
-	private static Customer convertToCustomer(CustomerDTO customerDto) {
+	public static Customer convertToCustomer(CustomerDTO customerDto) {
 		Customer customer = new Customer();
 		customer.setUserId(customerDto.getUserId());
 		customer.setName(customerDto.getName());

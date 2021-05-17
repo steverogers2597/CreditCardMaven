@@ -58,6 +58,10 @@ public class StatementDTO {
 		return "StatementDTO [statementId=" + statementId + ", dueAmount=" + dueAmount + ", billingDate=" + billingDate
 				+ ", dueDate=" + dueDate + ", customer=" + customer + "]";
 	}
+	public StatementDTO() {
+		super();
+		
+	}
 	
 	
 	

@@ -5,6 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class AddressDTO {
 	
+	public AddressDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	private String doorNo;
 	private String street;
 	private String area;
