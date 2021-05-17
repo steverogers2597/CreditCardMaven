@@ -19,21 +19,25 @@ public class CreditCard {
 	private String cardType;
 	private String cardName;
 	private String cardNumber;
-    private LocalDate Expirydate;
+    private LocalDate expiryDate;
     private int cvv;
     
 	public CreditCard(long id, String bankName, String cardType, String cardName, String cardNumber,
-			LocalDate expirydate, int cvv) {
+			LocalDate expiryDate, int cvv) {
 		super();
 		this.id = id;
 		this.bankName = bankName;
 		this.cardType = cardType;
 		this.cardName = cardName;
 		this.cardNumber = cardNumber;
-		Expirydate = expirydate;
+		expiryDate = expiryDate;
 		this.cvv = cvv;
 	}
 	
+	public CreditCard() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -64,11 +68,11 @@ public class CreditCard {
 	public void setCardNumber(String cardNumber) {
 		this.cardNumber = cardNumber;
 	}
-	public LocalDate getExpirydate() {
-		return Expirydate;
+	public LocalDate getExpiryDate() {
+		return expiryDate;
 	}
-	public void setExpirydate(LocalDate expirydate) {
-		Expirydate = expirydate;
+	public void setExpiryDate(LocalDate expiryDate) {
+		expiryDate = expiryDate;
 	}
 	public int getCvv() {
 		return cvv;
@@ -79,7 +83,7 @@ public class CreditCard {
 	@Override
 	public String toString() {
 		return "CreditCard [id=" + id + ", bankName=" + bankName + ", cardType=" + cardType + ", cardName=" + cardName
-				+ ", cardNumber=" + cardNumber + ", Expirydate=" + Expirydate + ", cvv=" + cvv + "]";
+				+ ", cardNumber=" + cardNumber + ", Expirydate=" + expiryDate + ", cvv=" + cvv + "]";
 	}
     
 }

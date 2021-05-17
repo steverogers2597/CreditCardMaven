@@ -8,12 +8,12 @@ public class AccountDTO {
 	private long accountId;
 	private String accountName;
 	private double balance;
-	private String accounttype;
+	private String accountType;
 	
-	public long getAccountid() {
+	public long getAccountId() {
 		return accountId;
 	}
-	public void setAccountid(long accountid) {
+	public void setAccountId(long accountid) {
 		this.accountId = accountid;
 	}
 	public String getAccountName() {
@@ -28,11 +28,11 @@ public class AccountDTO {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	public String getAccounttype() {
-		return accounttype;
+	public String getAccountType() {
+		return accountType;
 	}
-	public void setAccounttype(String accounttype) {
-		this.accounttype = accounttype;
+	public void setAccountType(String accounttype) {
+		this.accountType = accounttype;
 	}
 	
 	
@@ -41,12 +41,15 @@ public class AccountDTO {
 		this.accountId = accountId;
 		this.accountName = accountName;
 		this.balance = balance;
-		this.accounttype = accounttype;
+		this.accountType = accounttype;
+	}
+	public AccountDTO() {
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "AccountDTO [accountId=" + accountId + ", accountName=" + accountName + ", balance=" + balance
-				+ ", accounttype=" + accounttype + "]";
+				+ ", accounttype=" + accountType + "]";
 	}
 	
 	

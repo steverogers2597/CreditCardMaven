@@ -10,10 +10,17 @@ public class CreditCardDTO {
 	private long id;
 	private String cardName;
 	private String cardType;
-	private String cardNumbe;
+	private String cardNumber;
 	private LocalDate expiryDate;
 	private String bankName;
+	private int cvv;
 	
+	public int getCvv() {
+		return cvv;
+	}
+	public void setCvv(int cvv) {
+		this.cvv = cvv;
+	}
 	public long getId() {
 		return id;
 	}
@@ -32,11 +39,11 @@ public class CreditCardDTO {
 	public void setCardType(String cardType) {
 		this.cardType = cardType;
 	}
-	public String getCardNumbe() {
-		return cardNumbe;
+	public String getCardNumber() {
+		return cardNumber;
 	}
-	public void setCardNumbe(String cardNumbe) {
-		this.cardNumbe = cardNumbe;
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
 	}
 	public LocalDate getExpiryDate() {
 		return expiryDate;
@@ -50,20 +57,26 @@ public class CreditCardDTO {
 	public void setBankName(String bankName) {
 		this.bankName = bankName;
 	}
-	public CreditCardDTO(long id, String cardName, String cardType, String cardNumbe, LocalDate expiryDate,
-			String bankName) {
-		super();
-		this.id = id;
-		this.cardName = cardName;
-		this.cardType = cardType;
-		this.cardNumbe = cardNumbe;
-		this.expiryDate = expiryDate;
-		this.bankName = bankName;
+
+	public CreditCardDTO() {
+		// TODO Auto-generated constructor stub
 	}
+	public CreditCardDTO(long id, String cardName, String cardType, String cardNumbe, LocalDate expiryDate, String bankName,
+		int cvv) {
+	super();
+	this.id = id;
+	this.cardName = cardName;
+	this.cardType = cardType;
+	this.cardNumber = cardNumber;
+	this.expiryDate = expiryDate;
+	this.bankName = bankName;
+	this.cvv = cvv;
+}
+
 	@Override
 	public String toString() {
 		return "CreditCardDTO [id=" + id + ", cardName=" + cardName + ", cardType=" + cardType + ", cardNumbe="
-				+ cardNumbe + ", expiryDate=" + expiryDate + ", bankName=" + bankName + "]";
+				+ cardNumber + ", expiryDate=" + expiryDate + ", bankName=" + bankName + ", cvv=" + cvv + "]";
 	}
 	
 	

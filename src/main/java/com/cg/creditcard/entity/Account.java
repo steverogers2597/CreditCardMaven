@@ -32,6 +32,11 @@ public class Account {
 	}
 
 
+	public Account() {
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public long getAccountId() {
 		return accountId;
 	}
