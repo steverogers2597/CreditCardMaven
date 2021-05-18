@@ -13,12 +13,12 @@ public class TransactionUtils {
 		List<TransactionDTO> dtoList=new ArrayList<TransactionDTO>();
 		for(Transaction transaction : list)
 		{
-			dtoList.add(convertToTansactionDto(transaction));
+			dtoList.add(convertToTransactionDto(transaction));
 		}
 		return dtoList;
 	}
 
-	private static TransactionDTO convertToTansactionDto(Transaction transaction) 
+	public static TransactionDTO convertToTransactionDto(Transaction transaction) 
 	{
 		TransactionDTO transactionDto=new TransactionDTO();
 		transactionDto.setTranId(transaction.getTranId());
@@ -31,7 +31,7 @@ public class TransactionUtils {
 		return transactionDto;
 	}
 	
-	private static Transaction convertToTransaction(TransactionDTO transactionDto)
+	public static Transaction convertToTransaction(TransactionDTO transactionDto)
 	{
 		Transaction transaction=new Transaction();
 		transaction.setTranId(transactionDto.getTranId());

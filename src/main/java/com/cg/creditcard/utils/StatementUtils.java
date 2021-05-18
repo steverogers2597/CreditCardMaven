@@ -18,7 +18,7 @@ public class StatementUtils {
 			return dtoList;
 		}
 
-		private static StatementDTO convertToStatementDto(Statement statement) 
+		public static StatementDTO convertToStatementDto(Statement statement) 
 		{
 			StatementDTO statementDto=new StatementDTO();
 			statementDto.setStatementId(statement.getStatementId());
@@ -29,7 +29,7 @@ public class StatementUtils {
 			return statementDto;
 		}
 		
-		private static Statement convertToStatement(StatementDTO statementDto)
+		public static Statement convertToStatement(StatementDTO statementDto)
 		{
 			Statement statement=new Statement();
 			statement.setStatementId(statementDto.getStatementId());

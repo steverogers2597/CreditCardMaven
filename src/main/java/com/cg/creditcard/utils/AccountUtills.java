@@ -18,7 +18,7 @@ public class AccountUtills {
 		return dtoList;
 	}
 
-	private static AccountDTO convertToAccountDto(Account account) {
+	public static AccountDTO convertToAccountDto(Account account) {
 		AccountDTO accountDto =new AccountDTO();
 		accountDto.setAccountId(account.getAccountId());
 		accountDto.setAccountName(account.getAccountName());
@@ -28,7 +28,7 @@ public class AccountUtills {
 		return accountDto;
 	}
 	
-	private static Account convertToAccount(AccountDTO accountDto) {
+	public static Account convertToAccount(AccountDTO accountDto) {
 		Account account = new Account();
 		account.setAccountId(accountDto.getAccountId());
 		account.setAccountName(accountDto.getAccountName());

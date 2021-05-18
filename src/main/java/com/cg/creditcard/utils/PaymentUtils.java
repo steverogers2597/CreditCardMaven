@@ -5,7 +5,7 @@ import com.cg.creditcard.model.PaymentDTO;
 
 public class PaymentUtils {
 	
-	private static PaymentDTO convertToPaymentDto(Payment payment)
+	public static PaymentDTO convertToPaymentDto(Payment payment)
 	{
 		PaymentDTO paymentDto=new PaymentDTO();
 		paymentDto.setPaymentId(payment.getPaymentId());
@@ -14,7 +14,7 @@ public class PaymentUtils {
 		return paymentDto;
 	}
 	
-	private static Payment convertToPayment(PaymentDTO paymentDto)
+	public static Payment convertToPayment(PaymentDTO paymentDto)
 	{
 		Payment payment=new Payment();
 		payment.setPaymentId(paymentDto.getPaymentId());

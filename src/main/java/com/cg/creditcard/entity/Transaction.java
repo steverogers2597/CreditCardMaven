@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long tranId;
+	private Long tranId;
 	private String cardNumber;
 	private LocalDate tranDate;
 	private String status;
